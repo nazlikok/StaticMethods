@@ -31,7 +31,7 @@ public class Assignment04 {
             return false;
         }
     }
-    static int resolveAreaCode(int inputCode){
+    static String resolveAreaCode(int inputCode){
         switch (inputCode){
             case 212:
                 System.out.println("Istanbul-1");
@@ -69,7 +69,7 @@ public class Assignment04 {
             default:
                 System.out.println("Unknown Code");
         }
-        return inputCode;
+        return null;
     }
 
 }
