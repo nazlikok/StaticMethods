@@ -14,7 +14,8 @@ public class Assignment04 {
         System.out.println("What is the area code that you'r looking for?");
         Scanner num2 = new Scanner(System.in);
         int inputCode = (int) num2.nextFloat();
-        resolveAreaCode(inputCode);
+        //resolveAreaCode(inputCode);
+        System.out.println(resolveAreaCode(inputCode));
 
         System.out.println("Give me a number to test fibonacci");
         Scanner num3 = new Scanner(System.in);
@@ -39,42 +40,30 @@ public class Assignment04 {
     static String resolveAreaCode(int inputCode){
         switch (inputCode){
             case 212:
-                System.out.println("Istanbul-1");
-                break;
+                return "Istanbul-1";
             case 216:
-                System.out.println("Istanbul-2");
-                break;
+                return "Istanbul-2";
             case 312:
-                System.out.println("Ankara");
-                break;
+                return "Ankara";
             case 232:
-                System.out.println("Izmir");
-                break;
+                return "Izmir";
             case 322:
-                System.out.println("Adana");
-                break;
+                return "Adana";
             case 266:
-                System.out.println("Balikesir");
-                break;
+                return "Balikesir";
             case 224:
-                System.out.println("Bursa");
-                break;
+                return "Bursa";
             case 462:
-                System.out.println("Trabzon");
-                break;
+                return "Trabzon";
             case 532:
-                System.out.println("Turkcell");
-                break;
+                return "Turkcell";
             case 542:
-                System.out.println("Vodafone");
-                break;
+                return "Vodafone";
             case 505:
-                System.out.println("TurkTelecom");
-                break;
+                return "TurkTelecom";
             default:
-                System.out.println("Unknown Code");
+                return "Unknown Code";
         }
-        return null;
     }
 
     static void fibonacciSeries(int n){
