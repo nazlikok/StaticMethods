@@ -1,4 +1,5 @@
 package com.company;
+
 import java.util.Scanner;
 
 public class Assignment04 {
@@ -27,6 +28,17 @@ public class Assignment04 {
         int max = (int) num4.nextFloat();
         fibonacciUntil(max);
 
+        System.out.println("Give me a number to test Calculate squares");
+        Scanner num5 = new Scanner(System.in);
+        int square = (int) num5.nextFloat();
+        squares(square);
+
+        System.out.println("Give me a number to test Calculate squaresMax");
+        Scanner num6 = new Scanner(System.in);
+        int squareMax = (int) num6.nextFloat();
+        squaresUntil(squareMax);
+
+
     }
 
     static boolean isEven(int testnum) {
@@ -37,8 +49,8 @@ public class Assignment04 {
         }
     }
 
-    static String resolveAreaCode(int inputCode){
-        switch (inputCode){
+    static String resolveAreaCode(int inputCode) {
+        switch (inputCode) {
             case 212:
                 return "Istanbul-1";
             case 216:
@@ -66,11 +78,10 @@ public class Assignment04 {
         }
     }
 
-    static void fibonacciSeries(int n){
+    static void fibonacciSeries(int n) {
         int previous = 0;
         int add = 1;
-        for (int i = 1; i <= n; i++)
-        {
+        for (int i = 1; i <= n; i++) {
             System.out.print(previous + " + ");
             int sum = previous + add;
             previous = add;
@@ -79,10 +90,10 @@ public class Assignment04 {
         System.out.println();
     }
 
-    static void fibonacciUntil(int max){
+    static void fibonacciUntil(int max) {
         int m1 = 0;
         int m2 = 1;
-        for (int i = 1; i <=max ; i++) {
+        for (int i = 1; i <= max; i++) {
             System.out.print(m1 + " + ");
             int sum = m1 + m2;
             m1 = m2;
@@ -90,7 +101,22 @@ public class Assignment04 {
             if (max < m1) {
                 break;
             }
+        }
+    }
 
+    static void squares(int n) {
+        for (int i = 0; i <= n; i++) {
+            int square = i * i;
+            System.out.println("Squares " + i + "->" + square);
+        }
+    }
+
+    static void squaresUntil(int max) {
+        for (int i = 0; i <= max; i++) {
+            int squareMax = i * i;
+            if (max > squareMax) {
+                System.out.println("Squares " + i + "->" + squareMax);
+            }
         }
     }
 }
