@@ -40,6 +40,11 @@ public class Assignment04 {
 
         randomTest();
 
+        System.out.println("Give a number to countdown from");
+        Scanner num7 = new Scanner(System.in);
+        int n = (int) num7.nextFloat();
+        countdown(n);
+
     }
 
     static boolean isEven(int testnum) {
@@ -134,6 +139,11 @@ public class Assignment04 {
             System.out.println();*/
         }
         System.out.println("Sum of " + num +" random numbers = "+ sum);
-
+        System.out.println();
+    }
+    static void countdown(int n){
+        for(int i=n; i>=0; i--){
+            System.out.println(i);
+        }
     }
 }
