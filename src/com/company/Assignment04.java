@@ -1,12 +1,12 @@
 package com.company;
-
+import java.lang.Math;
 import java.util.Scanner;
 
 public class Assignment04 {
 
     public static void main(String[] args) {
 
-        System.out.println("Give me a number");
+        System.out.println("Give me a number to test whether it is even or odd");
         Scanner num1 = new Scanner(System.in);
         int input = (int) num1.nextFloat();
         //isEven(input);
@@ -38,6 +38,7 @@ public class Assignment04 {
         int squareMax = (int) num6.nextFloat();
         squaresUntil(squareMax);
 
+        randomTest();
 
     }
 
@@ -102,6 +103,7 @@ public class Assignment04 {
                 break;
             }
         }
+        System.out.println();
     }
 
     static void squares(int n) {
@@ -118,5 +120,20 @@ public class Assignment04 {
                 System.out.println("Squares " + i + "->" + squareMax);
             }
         }
+        System.out.println();
+    }
+    static void randomTest(){
+        int sum = 0;
+        int num=1000;
+        int max=150;
+        int min=50;
+        for (int i = 1; i <= num; i++){
+            int rand = (int)(Math.random()*(max-min)) + min;
+            sum += rand;
+            /*System.out.print(rand + " ");
+            System.out.println();*/
+        }
+        System.out.println("Sum of " + num +" random numbers = "+ sum);
+
     }
 }
